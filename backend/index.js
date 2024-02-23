@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const corsOptions = {
-  origin: '*', // Change this to your actual frontend URL
+  origin: 'https://deploy-sitefrontend.vercel.app', // Change this to your actual frontend URL
   credentials: true,
   optionSuccessStatus: 200,
 };
