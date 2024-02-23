@@ -29,7 +29,7 @@ const RegistrationForm = () => {
     e.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:4000/users', {
+      const response = await axios.post('https://deploy-sitebackend.vercel.app/users', {
         ...formData,
       });
   
