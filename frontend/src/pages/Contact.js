@@ -23,7 +23,7 @@ function Contact() {
 
     const axiosFetchData = async (processing) => {
         await axios
-            .get("http://localhost:4000/users")
+            .get("https://deploy-sitebackend.vercel.app/users")
             .then((res) => {
                 if (processing) {
                     setSelectData(res.data);
@@ -43,7 +43,7 @@ function Contact() {
         };
 
         await axios
-            .post("http://localhost:4000/contact/send", postData)
+            .post("https://deploy-sitebackend.vercel.app/contact/send", postData)
             .then((res) => setError(<p className="success">{res.data}</p>))
             .catch((err) => setError(<p className="error">Error submitting the form. Please try again.</p>));
     };
